@@ -52,3 +52,12 @@ Sonuçlar
 -Voting Classifier doğruluk skoru hesaplanır ve gösterilir.
 
 -Sonuçlar confusion matrix ile görselleştirilir.
+
+## Görseller
+
+### PCA ile 2 Boyutlu Veri Görselleştirme
+![image](https://github.com/user-attachments/assets/f0d0dd1a-1b4d-411e-bb6b-048b33b2f435)
+
+### Confusion Matrix
+![image](https://github.com/user-attachments/assets/089d283f-b9fc-4091-adb2-07c0d3747433)
+
