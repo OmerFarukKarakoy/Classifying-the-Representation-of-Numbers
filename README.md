@@ -1,58 +1,51 @@
 # Classifying-the-Representation-of-Numbers
-# PCA ve Makine Öğrenmesi ile Rakam Tanıma
+
+## PCA ve Makine Öğrenmesi ile Rakam Tanıma
 
 Proje Açıklaması
 
 Bu proje, sklearn.datasets içerisindeki digits veri setini kullanarak el yazısı rakamların sınıflandırılmasını hedefler. Modelleme sürecinde PCA (Principal Component Analysis) ile boyut indirgeme işlemi uygulanarak model performansı artırılmıştır. Destek Vektör Makineleri (SVM), Rastgele Orman (Random Forest) ve K-En Yakın Komşu (KNN) algoritmaları Grid Search kullanılarak optimize edilmiştir. Son olarak, Voting Classifier ile en iyi modeller birleştirilerek nihai bir sınıflandırıcı oluşturulmuştur.
 
-Kullanılan Kütüphaneler
+## ⚙️ Kullanılan Teknolojiler ve Kütüphaneler
 
--numpy
+- 🐍 **Python**
+- 📦 **NumPy** – Matematiksel işlemler
+- 📊 **Matplotlib** – Görselleştirme
+- 📚 **Scikit-learn (sklearn)** – Veri seti, modelleme, PCA, GridSearch, sınıflandırma algoritmaları
 
--matplotlib
+---
 
--sklearn
+## 📌 Proje Adımları
 
-Adımlar
+### 1️⃣ Veri Yükleme ve Ön İşleme
+- `load_digits()` fonksiyonu ile veri seti yüklendi.
+- `train_test_split` ile eğitim ve test verileri ayrıldı.
+- `StandardScaler` ile veriler normalize edildi.
+- PCA uygulanarak boyut indirgeme sağlandı.
+- PCA ile veri **2 boyutlu görselleştirildi**.
 
-1-Veri Yükleme ve Ön İşleme
+### 2️⃣ Model Eğitimi ve Hiperparametre Optimizasyonu
+- **SVM**, **Random Forest** ve **KNN** algoritmaları için `GridSearchCV` ile en uygun parametreler belirlendi.
+- En iyi parametrelere sahip modeller seçildi ve eğitildi.
 
-  load_digits() ile veri seti yüklenir.
+### 3️⃣ Voting Classifier ile Nihai Model Oluşturma
+- En iyi 3 model (SVM, RF, KNN) birleştirilerek `VotingClassifier` yapısı oluşturuldu.
+- Test verisiyle modelin performansı değerlendirildi.
 
-  Eğitim ve test veri setleri train_test_split ile ayrılır.
+### 4️⃣ Sonuçların Değerlendirilmesi
+- Doğruluk oranları ve en iyi parametreler ekrana yazdırıldı.
+- `confusion_matrix` ile tahmin performansı görselleştirildi.
+- Modellerin karşılaştırmalı sonuçları analiz edildi.
 
-  StandardScaler kullanılarak veriler standardize edilir.
+---
 
-  PCA ile boyut indirgeme yapılır.
+## 🧪 Sonuçlar
 
-  PCA ile 2 boyutlu görselleştirme gerçekleştirilir.
+- 🔍 Her algoritma için en iyi hiperparametreler başarıyla belirlendi.
+- 🧠 **Voting Classifier**, test verisinde yüksek doğruluk ile sınıflandırma yaptı.
+- 📊 Model performansı **confusion matrix** ile grafiksel olarak sunuldu.
 
-2-Model Eğitimi ve Optimizasyonu
-
-  GridSearchCV ile SVM, Random Forest ve KNN algoritmaları için en iyi hiperparametreler bulunur.
-
-  En iyi parametrelere sahip modeller seçilir.
-
-3-Voting Classifier ile Son Model Oluşturma
-
-  Üç model birleştirilerek VotingClassifier oluşturulur.
-
-  Nihai model test verisi ile değerlendirilir.
-
-4-Sonuçların Değerlendirilmesi
-
-  Confusion matrix oluşturulup görselleştirilir.
-
-  En iyi parametreler ve doğruluk skoru ekrana yazdırılır.
-
-Sonuçlar
-
--En iyi hiperparametreler ekrana yazdırılır.
-
--Voting Classifier doğruluk skoru hesaplanır ve gösterilir.
-
--Sonuçlar confusion matrix ile görselleştirilir.
-
+---
 ## Görseller
 
 ### PCA ile 2 Boyutlu Veri Görselleştirme
@@ -61,3 +54,7 @@ Sonuçlar
 ### Confusion Matrix
 ![image](https://github.com/user-attachments/assets/089d283f-b9fc-4091-adb2-07c0d3747433)
 
+
+## 👨‍💻 Geliştirici
+
+Bu proje **Ömer Faruk Karakoy** tarafından geliştirilmiştir. 
